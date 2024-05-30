@@ -1,0 +1,243 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7, 9 August 2023) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\usepackage{ctex}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.tex}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num.tex}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{邢骏洋}
+\tagline{Junyang Xing}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{Anya}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{xingjunyang@smail.nju.edu.cn}
+  \phone{+86 130 5766 6023}
+  \mailaddress{江苏省南京市鼓楼区汉口路22号}
+  \location{中国·江苏·南京}
+  \homepage{www.xjynotes.top}
+  \github{xing-junyang}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{教育经历}
+
+\cvevent{软件工程~\emph{本科生}~Software Engineering \emph{Undergraduate}}{南京大学~软件学院 \\Nanjing University Software Institute}{2022.9 ——~2026.6（预计毕业）}{南京市鼓楼区汉口路22号}
+\begin{itemize}
+\item 综合学分绩：4.53/5.0~（本专业排名前~10\%）
+\item 在《\emph{软件工程与计算I}》、《\emph{C语言程序设计基础}》、《\emph{离散数学}》、《\emph{计算机组织结构}》、《\emph{互联网计算}》等专业课获得90分以上成绩。
+\end{itemize}
+
+\cvsection{参与项目}
+
+\cvevent{网络报文可视化解析平台}{2024年南京大学大学生创新训练项目}{2024.1 ——~至今}{}
+
+\begin{itemize}
+\item 一个互联网协议栈的辅助教学平台
+\item 可以实时捕获并解析数据包，并以可视化的方式向用户展示数据包的结构，便于用户学习协议栈的知识。同时提供网络诊断工具、故障场景模拟、带宽限制等功能，方便用户进阶学习。
+\item 使用Vue3构建前端页面，后端采取Java+Spring框架，底层编写C++库来操纵TAP网卡设备。
+
+\end{itemize}
+
+\divider
+
+\cvevent{Lambda 演算解释器}{}{2023.3 ——~2023.6\quad\quad\github{xing-junyang/lambdaIntepreter}}{}
+\begin{itemize}
+  \item 一个支持Lambda演算的解释器。
+  \item 用户可以输入Lambda演算表达式，解释器会对表达式进行求值，并输出求值结果。用户也可以自定义函数，解释器会将函数定义存储在环境中，供后续调用。
+  \item 使用Java进行开发。
+\end{itemize}
+
+\divider
+
+\cvevent{恋之日计}{}{2024.1 ——~2024.2}{}
+\begin{itemize}
+  \item 一个情侣两人共享的日程管理小程序。支持课程表、日程表、倒数日等功能。
+  \item 使用微信小程序框架构建。
+\end{itemize}
+\medskip
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\newpage
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{个人亮点}
+
+\cvevent{}{获得奖项}{}{}
+\begin{itemize}
+\item 南京大学人民奖学金一等奖（2023.11）
+\item 南京大学软件学院EL程序设计大赛算法组二等奖（2023.6）
+\item “盛会启新程，泼墨展新篇”南京大学第七届微展示大赛优胜奖（2022.12）
+\item 2020 CCF CSP-S 二等奖（2020.11）
+\end{itemize}
+
+\cvevent{}{荣誉称号}{}{}
+\begin{itemize}
+  \item 南京大学新生学院优秀学生（2023.6）
+\end{itemize}
+
+\medskip
+
+\cvsection{座右铭}
+
+\begin{quote}
+``Talk is cheap. Show me the code.''\\
+\quad\quad\quad\quad\quad\quad------ Linus Torvalds
+\end{quote}
+
+\cvsection{技术能力}
+\cvtag{Java}
+\cvtag{C/C++}
+\cvtag{Assembly}
+\cvtag{Python}
+\cvtag{Vue3}
+\cvtag{Go}
+\cvtag{MySQL}
+
+\divider\smallskip
+
+\cvtag{Git}
+\cvtag{Linux}
+\cvtag{Docker}
+\cvtag{Spring}\\
+\cvtag{WeChat MiniProgram}
+
+
+\cvsection{语言能力}
+
+\cvskill{中文}{5}
+\divider
+
+\cvskill{英语/English}{3.5}
+\divider
+
+\cvskill{粤语/廣東話}{1} %% Supports X.5 values.
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+% \cvsection{Most Proud of}
+
+% \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+
+% \divider
+
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+% \divider
+
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+\end{paracol}
+
+
+\end{document}
